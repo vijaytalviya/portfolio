@@ -1,0 +1,133 @@
+@import "../../global.scss";
+.intro{
+    background-color:white;
+    display: flex;
+    @include mobile{
+        flex-direction: column;
+        align-items: center;
+    }
+    .left{
+        flex: 0.2;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        @include mobile{
+            flex-direction: row;
+            width: 100vw;
+            justify-content: flex-end;
+            
+            
+        }
+        
+        .itemContainer{
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            cursor: pointer;
+
+            a{
+                color: $mainColor;
+            }
+            
+            
+            @include mobile{
+                margin-right: 10px;
+                
+            }
+        }
+        
+    }
+    .right{
+        flex: 0.8;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+
+        .wrapper{
+            display: flex;
+            justify-content: center;
+            @include mobile{
+                flex-direction: column;
+                align-items: center;
+                height: 400px;
+                width: 100vw;
+                justify-content: space-between;
+
+            }
+
+            .text{
+                display: flex;
+                flex-direction: column;
+
+                
+                
+                h1{
+                    font-size: 60px;
+                    margin: 10px 0;
+                    @include mobile{
+                        font-size: 45px;
+                    }
+                }
+                h2{
+                    font-size:35px;
+                    @include mobile{
+                        font-size: 30px;
+                    }
+                }
+                h3{
+                    font-size: 30px;
+                    @include mobile{
+                        font-size: 25px;
+                    }
+                }
+            }
+            .imgContainer{
+                width: 200px;
+                height: 200px;
+                margin-left: 5px;
+                border-radius: 40%;
+                display: flex; 
+                background-color:#7d2ae8;
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
+                
+                 
+                
+                img{
+                    width: 100%;
+                    height: 100%;
+                    display: block;
+                }
+            }
+        }
+        .scroll{
+            display: flex;
+            
+            align-self: flex-end;
+            
+            a{
+                .icon{
+                    align-self: flex-end;
+                    font-size: 50px;
+                    margin-right: 20px;
+                    animation: arrowBlink 2s infinite;
+                    color: $mainColor;
+                }
+                @keyframes arrowBlink {
+                    100%{
+                        opacity: 0;
+                    }
+                }
+            }
+        }
+    }
+    
+        
+
+        
+}
